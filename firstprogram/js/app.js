@@ -130,29 +130,26 @@ function displayModule() {
         if (Object.prototype.hasOwnProperty.call(courses, i)) {
             const course = courses[i];
             if (course.alias.toLowerCase().includes(query)) {
+
+                let modulecontent= ''+
+                '<h2 style="color:white">'+course.alias+'</h2>'+
+                '<table style="color:white;" bgcolor="white">'+
+                    '<tr bgcolor="black"><th>Module</th><th>Lecturer</th><th>Venue</th><th>Study Guide</th><th>Video</th></tr>';
                 for (const modIndex in course.modules) {
                     const module = course.modules[modIndex];
-                    document.getElementById('search-form').innerHTML = 
-                        '<p><strong>'+module.name+'</strong></p>'+
-                        '<p>Lecturer:'+module.lecturer+'</p>'+
-                        '<p>Venue: '+module.venue+'</p>'+
-                        '<p><a href="'+module.studyGuide+'" target="_blank">Download Study Guide</a></p>'+
-                        '<p><a href="'+module.videoLink+'" target="_blank">View Video</a></p>'
-                        document.getElementById('search-form').innerHTML = ''+
-                        '<h2 style="color:white">'+course.alias+'</h2>'+
-                        '<table style="color:white">'+
-                            '<tr><th>Module</th><th>Lecturer</th><th>Venue</th><th>Study Guide</th><th>Video</th></tr>'+
-                                '<tr>'+
+                       
+                    modulecontent+=''+
+                                '<tr style="color:black" bgcolor="grey">'+
                                     '<td>'+module.name+'</td>'+
                                     '<td>'+module.lecturer+'</td>'+
                                     '<td>'+module.venue+'</td>'+
                                     '<td><a href="'+module.studyGuide+'" download>Download</a></td>'+
                                     '<td><a href="'+module.videoLink+'" target="_blank">Watch</a></td>'+
-                                '</tr>'+
-                        '</table>'
-                    ;
-                    
+                                '</tr>';
+                                            
                 }
+               modulecontent+='</table>';
+               document.getElementById('search-form').innerHTML=modulecontent;
                 
             }
             
