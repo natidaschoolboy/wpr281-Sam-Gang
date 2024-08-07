@@ -11,7 +11,7 @@
 body{
     background-color: linear-gradient(to top, #010329, #000005);
 }
-header {
+.header1 {
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,11 +28,25 @@ header {
     animation: fadeIn 0.45s 7s ease forwards;
     opacity: 0;
   }
+  .header2 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all 0.45s ease;
+    color: white;
+  }
   .navlist {
     display: flex;
   }
   .navlist a {
-    color: var(--second-color);
     font-size: 17px;
     font-weight: 500;
     margin: 0 25px;
@@ -66,11 +80,13 @@ header {
   .vid{
     animation: fadeOutStart 0.45s 7s ease forwards;
   }
+  .vid2{
+    animation: fadeOutStart 0.45s 5s ease forwards;
+  }
 .search-body{
     padding: 50px;
 }
 .search-form{
-    
     width: 500px;
     height: 350px;
     background-color: black;
@@ -109,6 +125,7 @@ header {
     height: 30px;
   
 }
+
 .course-btn:hover{
   color: red;
 }
@@ -126,7 +143,58 @@ header {
   transition: height 0.5s;
   
 }
+.other-body{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tbl {
+  animation: fadeInSearch 0.45s 6s ease forwards;
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  transform: translateY(180px);
+  opacity: 0;
+}
 
+.tbl,.tbl th,.tbl td {
+  border: 1px solid #ddd;
+}
+
+.tbl th,.tbl td {
+  padding: 10px;
+  text-align: left;
+}
+
+.tbl th {
+  background-color: #f4f4f4;
+}
+
+.tbl tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.btncourse{
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.btncourse:hover{
+  background-color: lightblue;
+  border: none;
+}
+.description{
+  transform: translateY(80px);
+  background-color: #ddd;
+  color: black;
+  border-radius: 15px;
+  width: 50%;
+  animation: fadeInSearch 0.45s 6s ease forwards; opacity:0;
+  
+}
   @keyframes fadeOutStart {
     0% {
         opacity: 1;
