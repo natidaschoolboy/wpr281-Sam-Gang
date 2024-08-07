@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,13 @@
    <script src="js/app.js"></script>
     <title>Let's learn together</title>
 </head>
-<body>
+<body id="bodylicious">
      
-      <header>
+      <header class="header1">
         <a href="#" class="logo">We<span style="color: yellow">Learn</span></a>
 
         <ul class="navlist">
-            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#home" class="active" style="color: white" onclick="home()">Home</a></li>
            
 
         </ul>
@@ -28,8 +29,14 @@
                 <div class="search-form" id="search-form">
                     <h1 style="color: yellow;">Course:</h1><br/>
                     <input id="search-input" class="search-input" type="text" placeholder="Search For Course"> <br></br>
-                    <button class="search-button" onclick="search()"><h1>Search</h1></button>
-                    
+                    <button class="search-button" onclick="search()"><h1>Search</h1></button><br></br>
+                    <table bgcolor="white">
+                        <tr bgcolor="grey"><th>Available Courses</th></tr>
+                        <tr bgcolor="lightgrey"><td>Higher Certificate</td></tr>
+                        <tr><td>Diploma</td></tr>
+                        <tr bgcolor="lightgrey"><td>Bsc In Information Technology</td></tr>
+                        <tr><td>Bsc of Computing</td></tr>
+                    </table>
 
                 </div>
             </center>
